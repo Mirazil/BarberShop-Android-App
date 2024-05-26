@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/launch_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/launch_screen" />
+
+    <Button
+        android:id="@+id/orders_button"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="152dp"
+        style="@style/OrderButtonTheme"
+        android:fontFamily="@font/intro"
+        android:shadowRadius="15"
+        android:text="ORDERS"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/button_text_color"/>
+
+    <Button
+        android:id="@+id/welcome_button"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="@font/intro"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:shadowRadius="15"
+        android:text="OPEN"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_beige"/>
+
+    <Button
+        android:id="@+id/map_button"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/intro"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        style="@style/OrderButtonTheme"
+        android:shadowRadius="15"
+        android:text="MAP"
+        android:textSize="25dp"
+        android:textColor="@color/button_text_color"
+        android:textStyle="bold"/>
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plumb_master"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/title_master"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MASTER"
+            android:fontFamily="@font/intro"
+            android:textColor="#c8a48f"
+            android:textSize="68sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="35"/>
+
+        <ImageView
+            android:id="@+id/barber_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/title_master"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/barber"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/barber_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OLEH"
+            android:fontFamily="@font/intro"
+            android:textColor="#c8a48f"
+            android:textSize="36sp"
+            android:layout_below="@id/barber_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="5"/>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/barber_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <!-- Time Buttons -->
+            <Button
+                android:id="@+id/button_800"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="8:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_1000"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="10:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_1200"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="12:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_1400"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="14:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_1600"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="16:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_1800"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:text="18:00"
+                android:textColor="#6d6058"
+                android:textStyle="bold"
+                android:textSize="34sp"
+                android:fontFamily="@font/intro"
+                style="@style/ButtonTheme"
+                android:layout_margin="8dp"/>
+        </GridLayout>
+
+        <Button
+            android:id="@+id/sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textColor="#6d6058"
+            android:textStyle="bold"
+            android:textSize="34sp"
+            android:fontFamily="@font/intro"
+            style="@style/ButtonTheme"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="32dp" />
+    </RelativeLayout>
+</FrameLayout>

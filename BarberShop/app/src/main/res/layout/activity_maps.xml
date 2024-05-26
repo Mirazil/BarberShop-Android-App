@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plumb"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Our Shops"
+        android:gravity="center"
+        android:fontFamily="@font/intro"
+        android:textColor="#c8a48f"
+        android:textSize="68sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="35" />
+
+    <!-- Бокс с адресом 1 -->
+    <RelativeLayout
+        android:id="@+id/shop_box1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/shop_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intro"
+            android:text="Біла борода"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shop_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name1"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/intro"
+            android:text="вулиця Василя Липківського, 18, Київ, 03035"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <!-- Repeat the above RelativeLayout for each additional shop box, updating the ids accordingly -->
+    <!-- Бокс с адресом 2 -->
+    <RelativeLayout
+        android:id="@+id/shop_box2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_box1"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/shop_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intro"
+            android:text="VICE Barbershop"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shop_address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name2"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/intro"
+            android:text="вулиця Василя Липківського, 16а, Київ, 02000"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <!-- Repeat the same for boxes 3 to 6 -->
+
+    <!-- Бокс с адресом 3 -->
+    <RelativeLayout
+        android:id="@+id/shop_box3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_box2"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/shop_name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intro"
+            android:text="Shape"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shop_address3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name3"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/intro"
+            android:text="вулиця Василя Липківського, 16г, Київ, 03035"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <!-- Бокс с адресом 4 -->
+    <RelativeLayout
+        android:id="@+id/shop_box4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_box3"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/shop_name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intro"
+            android:text="Характер"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shop_address4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name4"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/intro"
+            android:text="вулиця Солом'янська, 20В, Київ, 03110"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <!-- Бокс с адресом 5 -->
+    <RelativeLayout
+        android:id="@+id/shop_box5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shop_box4"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners">
+
+        <TextView
+            android:id="@+id/shop_name5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intro"
+            android:text="THE GARRISON"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shop_address5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name5"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/intro"
+            android:text="вулиця Івана Світличного, 6, Київ, 03087"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/home_screen_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME SCREEN"
+        android:textColor="#6d6058"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:fontFamily="@font/intro"
+        style="@style/ButtonTheme"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp" />
+
+</RelativeLayout>

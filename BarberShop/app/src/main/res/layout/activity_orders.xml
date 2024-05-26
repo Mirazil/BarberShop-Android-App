@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plumb_orders"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/title_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="My orders"
+        android:fontFamily="@font/intro"
+        android:textColor="#c8a48f"
+        android:textSize="68sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="35" />
+
+    <LinearLayout
+        android:id="@+id/orders_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/intro"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:textColor="#6d6058"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:fontFamily="@font/intro"
+        style="@style/ButtonTheme"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp" />
+
+</RelativeLayout>

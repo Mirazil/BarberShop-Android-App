@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plumb_success">
+
+    <TextView
+        android:id="@+id/title_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/intro"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="35"
+        android:text="THE RECORDING WAS SUCCESSFUL, WE ARE WAITING FOR YOU"
+        android:textColor="#c8a48f"
+        android:textSize="39sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_success"
+        android:layout_marginTop="58dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intro"
+                android:text="ORDER:"
+                android:textColor="#c8a48f"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/intro"
+                android:text="Bald"
+                android:textColor="#c8a48f"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intro"
+                android:text="TIME:"
+                android:textColor="#c8a48f"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/intro"
+                android:gravity="end"
+                android:text="18:00"
+                android:textColor="#c8a48f"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tick_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/space"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/tick" />
+
+    <Button
+        android:id="@+id/my_orders_button"
+        style="@style/OrderButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/intro"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="MY ORDERS"
+        android:textColor="#6d6058"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/home_screen_button"
+        style="@style/ButtonTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/intro"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="HOME SCREEN"
+        android:textColor="#6d6058"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+</RelativeLayout>

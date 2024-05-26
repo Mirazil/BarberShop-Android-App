@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BarberShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_beige</item>
+        <item name="colorPrimaryVariant">@color/secondary_beige</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_beige</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <!-- Theme for buttons -->
+    <style name="ButtonTheme" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/button_background_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:radius">14dp</item>
+        <item name="android:shadowColor">@android:color/darker_gray</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="OrderButtonTheme" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/button_background_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:radius">14dp</item>
+        <item name="android:shadowColor">@android:color/darker_gray</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+</resources>

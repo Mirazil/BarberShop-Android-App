@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plumb"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/title_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SERVICES"
+            android:fontFamily="@font/intro"
+            android:textColor="#c8a48f"
+            android:textSize="68sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="35"/>
+
+        <GridLayout
+            android:id="@+id/services_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="2">
+
+            <!-- HAIRCUTS -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_haircuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/intro"
+                    android:text="30$"
+                    android:textColor="@color/secondary_beige"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/haircuts_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/service_circle">
+
+                    <ImageView
+                        android:id="@+id/icon_haircuts"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/scissors" />
+
+                    <TextView
+                        android:id="@+id/text_haircuts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_haircuts"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/intro"
+                        android:text="HAIRCUTS"
+                        android:textColor="@color/primary_beige"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- SHAVING -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_shaving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/intro"
+                    android:text="15$"
+                    android:textColor="@color/secondary_beige"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/shaving_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/service_circle">
+
+                    <ImageView
+                        android:id="@+id/icon_shaving"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/shaving" />
+
+                    <TextView
+                        android:id="@+id/text_shaving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_shaving"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/intro"
+                        android:text="SHAVING"
+                        android:textColor="@color/primary_beige"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- HAIR COLORING -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_hair_coloring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/intro"
+                    android:text="45$"
+                    android:textColor="@color/secondary_beige"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/hair_coloring_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/service_circle">
+
+                    <ImageView
+                        android:id="@+id/icon_hair_coloring"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/hair_coloring" />
+
+                    <TextView
+                        android:id="@+id/text_hair_coloring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_hair_coloring"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/intro"
+                        android:text="HAIR COLORING"
+                        android:textColor="@color/primary_beige"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- HAIR STYLING -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_hair_styling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/intro"
+                    android:text="25$"
+                    android:textColor="@color/secondary_beige"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:id="@+id/hair_styling_layout"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/service_circle"
+                    android:layout_marginBottom="50dp">
+
+                    <ImageView
+                        android:id="@+id/icon_hair_styling"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/hair_styling" />
+
+                    <TextView
+                        android:id="@+id/text_hair_styling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icon_hair_styling"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/intro"
+                        android:text="HAIR STYLING"
+                        android:textColor="@color/primary_beige"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </GridLayout>
+
+        <!-- Cart Button -->
+        <RelativeLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/service_circle">
+
+            <ImageView
+                android:id="@+id/icon_cart"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cart" />
+
+            <TextView
+                android:id="@+id/cart_count"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="0"
+                android:fontFamily="@font/intro"
+                android:textColor="@color/secondary_beige"
+                android:textSize="18sp"
+                android:background="@drawable/cart_count_background"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
