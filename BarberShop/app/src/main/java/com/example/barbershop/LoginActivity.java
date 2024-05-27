@@ -8,9 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -24,13 +28,41 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        init();
+        edLogin = findViewById(R.id.email_edit_text);
+        edPassword = findViewById(R.id.password_edit_text);
+        loginButton = findViewById(R.id.login_button);
+        signupButton = findViewById(R.id.signup_button);
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser();
+
+                if(edLogin.getText().toString().isEmpty() || edPassword.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Incorrect password or email", Toast.LENGTH_SHORT).show();
+                }else {
+                    FirebaseAuth.getInstance().signInWithEmailAndPassword(edLogin.getText().toString(), edPassword.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                    } else {
+                                        Toast.makeText(getApplicationContext(),"Incorrect password or email", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            });
+                }
             }
         });
+
+
+//        loginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                loginUser();
+//            }
+//        });
 
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,37 +73,31 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void init() {
-        edLogin = findViewById(R.id.email_edit_text);
-        edPassword = findViewById(R.id.password_edit_text);
-        loginButton = findViewById(R.id.login_button);
-        signupButton = findViewById(R.id.signup_button);
-    }
 
-    private void loginUser() {
-        String email = edLogin.getText().toString().trim();
-        String password = edPassword.getText().toString().trim();
+//    private void loginUser() {
+//        String email = edLogin.getText().toString().trim();
+//        String password = edPassword.getText().toString().trim();
+//
+//        if (TextUtils.isEmpty(email)) {
+//            edLogin.setError("Email is required.");
+//            return;
+//        }
+//
+//        if (TextUtils.isEmpty(password)) {
+//            edPassword.setError("Password is required.");
+//            return;
+//        }
+//
+//        if (password.length() < 6) {
+//            edPassword.setError("Password must be at least 6 characters.");
+//            return;
+//        }
 
-        if (TextUtils.isEmpty(email)) {
-            edLogin.setError("Email is required.");
-            return;
-        }
-
-        if (TextUtils.isEmpty(password)) {
-            edPassword.setError("Password is required.");
-            return;
-        }
-
-        if (password.length() < 6) {
-            edPassword.setError("Password must be at least 6 characters.");
-            return;
-        }
-
-        // Placeholder for login logic
-        Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_down_in, R.anim.slide_down_out);
-        finish();
-    }
+//        // Placeholder for login logic
+//        Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+//        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//        startActivity(intent);
+//        overridePendingTransition(R.anim.slide_down_in, R.anim.slide_down_out);
+//        finish();
+//    }
 }

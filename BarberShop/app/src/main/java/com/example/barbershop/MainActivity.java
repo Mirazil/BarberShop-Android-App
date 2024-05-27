@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button ordersButton, welcomeButton, mapButton;
@@ -19,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         ordersButton = findViewById(R.id.orders_button);
         welcomeButton = findViewById(R.id.welcome_button);
         mapButton = findViewById(R.id.map_button);
+
+//        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+//            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//        }
 
         ordersButton.setOnClickListener(new View.OnClickListener() {
             @Override

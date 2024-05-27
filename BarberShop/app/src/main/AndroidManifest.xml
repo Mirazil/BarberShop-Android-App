@@ -25,19 +25,12 @@
 
 
         <activity android:name=".ServicesActivity" />
-
         <activity android:name=".MasterActivity" />
-
         <activity android:name=".SuccessActivity" />
-
         <activity android:name=".LoadingActivity" />
-
         <activity android:name=".OrdersActivity" />
-
         <activity android:name=".MainActivity" />
-
         <activity android:name=".SignUpActivity" />
-
         <activity android:name=".MapsActivity" />
 
     </application>
